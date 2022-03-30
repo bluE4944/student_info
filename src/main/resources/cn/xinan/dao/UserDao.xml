@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.xinan.dao.UserDao">
+
+    <!-- 查询所有 -->
+    <select id="findAll" resultType="cn.xinan.domain.User">
+        select * from user
+    </select>
+
+
+    <!-- 根据id查询用户 -->
+    <select id="findUserById" parameterType="INT" resultType="cn.xinan.domain.User">
+        select * from user where id = #{user_id}
+    </select>
+
+    <!-- 根据条件查询用户 -->
+    <select id="findUserByCondition" resultType="cn.xinan.domain.User" parameterType="cn.xinan.domain.User">
+        select * from user
+        <where>
+            <if test="user_name != null">
+                and user_name = #{user_name}
+            </if>
+            <if test="user_phone != null">
+                and user_phone = #{user_phone}
+            </if>
+            <if test="user_email != null">
+                and user_email = #{user_email}
+            </if>
+            <if test="user_password != null">
+                and user_password = #{user_password}
+            </if>
+        </where>
+    </select>
+
+    <!-- 保存用户 -->
+    <insert id="saveUser" parameterType="cn.xinan.domain.User">
+        insert into user (user_name,user_email,user_password,user_phone,user_status) values(#{user_name},#{user_email},#{user_password},#{user_phone},#{user_status})
+    </insert>
+
+    <!-- 获取用户的总记录数 -->
+    <select id="findTotal" resultType="int">
+        select count(user_id) from user
+    </select>
+
+    <!-- 删除用户 -->
+    <delete id="deleteUser" parameterType="java.lang.Integer">
+        delete from user where id=#{user_id}
+    </delete>
+
+    <!--根据据传进来的分页对象查询分页后的用户数据集合-->
+    <select id="findByUserByLayPage" resultType="cn.xinan.domain.User" parameterType="cn.xinan.util.LayPage">
+        select * from user
+        <where>
+            <if test="t.user_name != null">
+                and user_name = #{t.user_name}
+            </if>
+            <if test="t.user_phone != null">
+                and user_phone = #{t.user_phone}
+            </if>
+            <if test="t.user_email != null">
+                and user_email = #{t.user_email}
+            </if>
+            <if test="t.user_password != null">
+                and user_password = #{t.user_password}
+            </if>
+        </where>
+        limit #{startIndex},#{pageSize}
+    </select>
+</mapper>

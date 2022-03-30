@@ -1,0 +1,37 @@
+
+.pageTop{
+	height: 50px;
+	line-height: 50px;
+}
+
+#botCallback2 :hover{
+	color: dodgerblue;
+}
+
+a{
+	font-size: 14px;
+}
+
+
+
+.tableWidth{
+	width: 500px;
+}
+
+
+th{
+	border-left:1px solid white;
+}
+
+thead{
+	border:2px solid lightgray;
+}
+
+
+#myTab{
+	width: 98%;
+}
+
+#layPage_div {
+	width: auto;
+}

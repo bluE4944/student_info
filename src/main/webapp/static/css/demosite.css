@@ -1,0 +1,47 @@
+/* ====================================
+
+Basic CSS for the demo
+
+==================================== */
+body{
+	/*background-color: black;*/
+	padding-top: 20px;
+	height: 100%;
+	width: 90%;
+	margin-right: 20px;
+	/*padding-right: 50px;*/
+	background-color: #e4e4e4;
+	margin-bottom: 150px;
+}
+
+p{
+	margin-top: 0px;
+}
+
+.BoxContainer{
+	position:relative;
+	margin-left: 200px;
+
+	font-family: 'Segoe UI', Tahoma, Helvetica, Sans-Serif;
+}
+
+h1{
+	font-weight: normal;
+	margin-bottom: -20px;
+}
+
+h3{
+	font-weight: normal;
+}
+
+button{
+	padding: 10px;
+}
+
+@media screen and (orientation:portrait) {
+
+	.BoxContainer{
+		margin-left: 20px;
+	}
+
+}
