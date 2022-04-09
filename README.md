@@ -16,7 +16,8 @@
  
 ## 截图
  登录：
-![0UR%3P4Y~}G)FH(S~QJ64A8](https://user-images.githubusercontent.com/49679189/162568728-11f5e6c0-cd05-4df2-b6b6-a3cb0e9a6fa7.png)
+![管理系统截图](https://user-images.githubusercontent.com/49679189/162575975-ed33613f-4db0-4d8c-aeed-e601f440594e.png)
+
 
 学生管理：
 ![image](https://user-images.githubusercontent.com/49679189/162568892-45587f2b-fa06-45ca-b14c-0e85145958e7.png)
